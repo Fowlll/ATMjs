@@ -1,0 +1,98 @@
+@-webkit-keyframes BackgroundGradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundGradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BackgroundGradientMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+}
+h1, h2, h3, h4, p, a, span{
+    font-family: "Roboto";
+}
+/* Screen */
+#screen{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg, #246655, #209879, #11d8a4, #60edc8);
+    background-size: 800% 800%;
+
+    -webkit-animation: BackgroundGradientMove 15s ease infinite;
+    -moz-animation: BackgroundGradientMove 15s ease infinite;
+    animation: BackgroundGradientMove 15s ease infinite;
+}
+/* Numpad */
+#numpad{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 33%);
+    width: min-content;
+    margin: auto;
+}
+#numpad > span{
+    padding: 20px 30px;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(255,255,255, 0.4);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+}
+#numpad > span:hover{
+    background-color: rgba(255,255,255, 0.8);
+    color: #246655;
+}
+/* Card Code */
+#card_code{
+    width: 300px;
+    padding: 0px 30px;
+    border: solid 2px white;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    line-height: 80px;
+}
+.btn{
+    background-color: rgba(255,255,255, 0.4);
+    color: white;
+    text-align: center;
+    padding: 30px 40px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 0.25s, color 0.25s;
+}
+.btn:hover{
+    background-color: rgba(255,255,255, 0.8);
+    color: #246655;
+}
+#info{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+#copyright{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
